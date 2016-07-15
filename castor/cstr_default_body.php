@@ -103,8 +103,7 @@
 
 		$query = "select * from users";
 
-		$res = cstr_query($cstr_dbconn, $query);
-		while($row = cstr_fetch_assoc($res)) {
+		foreach($cstr_dbconn->query($query) as $row) {
 			var_dump($row);
 			echo "<br>";
 		}

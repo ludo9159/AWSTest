@@ -1,11 +1,13 @@
 <?php
 function cstr_dbconnect() {
 	global $cstr_dbhost, $cstr_dbname, $cstr_dbuser, $cstr_dbpwd, $lc_error;
-	$str = "host=" . $cstr_dbhost . " port=5432 dbname=" . $cstr_dbname . " user=" . $cstr_dbuser . " password=" . $cstr_dbpwd;
+/*	$str = "host=" . $cstr_dbhost . " port=5432 dbname=" . $cstr_dbname . " user=" . $cstr_dbuser . " password=" . $cstr_dbpwd;
 	$dbconn = pg_pconnect($str);
 	if (!is_resource($dbconn)) {
 		$lc_error .= $str . "<br>";
-	}
+	}*/
+	$str = "pgsql:host=" . $cstr_dbhost . ";port=5432;dbname=" . $cstr_dbname . ";user=" . $cstr_dbuser . ";password=" . $cstr_dbpwd;
+	$dbconn = new PDO($str);
 	return $dbconn;
 }
 
