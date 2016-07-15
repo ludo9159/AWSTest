@@ -4,10 +4,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Starter Template for Bootstrap</title>
+	<title>Castor</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="/AWS/Test/scripts/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/scripts/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<style>
