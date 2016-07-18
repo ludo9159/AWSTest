@@ -39,7 +39,6 @@ function lc_errorhandler($errno, $errstr, $errfile, $errline) {
 			break;
 	}
 
-	/* Ne pas exécuter le gestionnaire interne de PHP */
 	$_SESSION["LC_ERROR"] = $lc_error;
 	return true;
 }
@@ -63,25 +62,6 @@ function lc_showerror() {
 		echo "</div>";
 		$lc_error = "";
 	}
-}
-
-function lc_session_start($atimeout) {
-	global $lc_error;
-	session_start();
-	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > $atimeout * 60)) {
-		lc_session_stop();
-		session_start();
-	}
-	$_SESSION['LAST_ACTIVITY'] = time();
-	if (isset($_SESSION["LC_ERROR"])) {
-		$lc_error = $_SESSION["LC_ERROR"];
-		$_SESSION["LC_ERROR"] = "";
-	}
-}
-
-function lc_session_stop() {
-	session_unset();
-	session_destroy();
 }
 
 function lc_isdate($adate) {

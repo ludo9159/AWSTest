@@ -21,5 +21,8 @@ if ($cstr_urllocaldir == "/") {
 require_once($cstr_dirlclib . "lc_tools.php");
 require_once($cstr_dirlclib . "lc_dbtools.php");
 
+require_once($cstr_dirbase . "cstr_const.php");
 require_once($cstr_dirbase . "cstr_tools.php");
 require_once($cstr_dirbase . "cstr_dbtools.php");
+require_once($cstr_dirbase . "cstr_session.php");
+require_once($cstr_dirbase . "cstr_user.php");

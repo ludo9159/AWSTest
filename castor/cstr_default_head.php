@@ -6,6 +6,7 @@
 	<meta name="author" content="">
 	<title>Castor</title>
 
+	<link rel="icon" href="favicon.ico" />
 	<!-- Bootstrap core CSS -->
 	<link href="/scripts/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
